@@ -1,4 +1,4 @@
-﻿# START SCRIPT
+# START SCRIPT
 
 
 # Script Banner
@@ -21,6 +21,7 @@ echo "
 # Input textfile - file in which IP Address are read from
 $textfile = 'IPList.txt'
 
+echo "[+] Connection Tests:"
 
 # Loop through each IP Address in the text file
 foreach($line in Get-Content $textfile) {
@@ -30,20 +31,20 @@ foreach($line in Get-Content $textfile) {
     Try
     {
         # curl command executed the IP Address to test for 200 status code
-        $connTest = curl $ip -Method Get -timeout 3 -ErrorAction Ignore | findstr "200"
+        $connTest = curl $ip -Method Get -timeout 10 -ErrorAction Ignore | findstr "200"
         $status = Write-Output $connTest
 
         # If status of 200 is returned
         if ($status) {
             # State connection success
-            echo "Connection Test SUCCESS,$ip"
+            echo "SUCCESS,$ip"
         }
     }
     Catch
     {
         # If status code of 200 is not returned
         # State connection failed
-        echo "Connection Test FAIL,$ip"
+        echo "FAIL,$ip"
     }
 }
 
