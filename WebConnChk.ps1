@@ -2,7 +2,7 @@
 
 
 # Script Banner
-echo """
+echo "
 
  __      __      ___.   _________                      _________ .__     __    
 /  \    /  \ ____\_ |__ \_   ___ \  ____   ____   ____ \_   ___ \|  |__ |  | __
@@ -16,7 +16,7 @@ echo """
 [+] Dependencies:  IP Address input file
 [+] Author:        Ryan Pan***** 07/16/2019
 
-"""
+"
 
 # Input textfile - file in which IP Address are read from
 $textfile = 'IPList.txt'
