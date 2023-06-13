@@ -12,6 +12,6 @@
 
 # The Connection Check tools have been created to aid information gathering for System Administrators, Pen Testers, or the like. 
 
-# Installation: Download or copy/paste to a '.ps1' file and run from the command line.
+# Installation: Download and execute
 
 # Thanks.
